@@ -12,7 +12,7 @@ var environment string = ""
 // Serving hello URL
 func hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("hello request received (%s %s %s)\n", r.RemoteAddr, r.Method, r.URL)
-	fmt.Fprintf(w, "Hello from %s!", environment)
+	fmt.Fprintf(w, `<h1 style="font-size:120px;">Hello %s!<h1/>`, environment)
 }
 
 func main() {
